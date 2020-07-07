@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "Host.Results": "Information",
+      "Host.Aggregator": "Information",
+      "Function.EventConsumer.User": "Information",
+      "Function.EventSender.User": "Information"
+    },
+    "applicationInsights": {
+      "samplingSettings": {
+        "excludedTypes": "Event;Trace;Dependency"
+      }
+    }
+  }
+}
