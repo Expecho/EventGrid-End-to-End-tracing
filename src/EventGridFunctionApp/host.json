@@ -5,8 +5,8 @@
       "Default": "Warning",
       "Host.Results": "Information",
       "Host.Aggregator": "Information",
-      "Function.EventConsumer.User": "Information",
-      "Function.EventSender.User": "Information"
+      "Function.EventConsumer": "Information",
+      "Function.EventSender": "Information"
     },
     "applicationInsights": {
       "samplingSettings": {
