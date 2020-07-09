@@ -46,7 +46,7 @@ namespace EventGridFunctionApp
 
             var eventData = eventGridEvent.As<EventData>();
 
-            using (var operation = _telemetryClient.StartOperation<DependencyTelemetry>(eventData.OperationId, eventData.ParentOperationId))
+            using (var operation = _telemetryClient.StartOperation<DependencyTelemetry>($"{executionContext.FunctionName}", eventData.OperationId, eventData.ParentOperationId))
             {
                 operation.Telemetry.Success = false;
                 operation.Telemetry.Type = "EventHandler";
