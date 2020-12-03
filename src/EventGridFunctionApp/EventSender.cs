@@ -19,8 +19,8 @@ namespace EventGridFunctionApp
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            var topicEndpoint = "https://topicexpecho.westeurope-1.eventgrid.azure.net/api/events";
-            var topicKey = "DgVOvWAdRLl/PIuTLN6zbFxbZy+JwUjNIGtTG83DEJs=";
+            var topicEndpoint = Environment.GetEnvironmentVariable("EG-Topic");
+            var topicKey = Environment.GetEnvironmentVariable("EG-Key");
             var topicCredentials = new TopicCredentials(topicKey);
             var topicHostname = new Uri(topicEndpoint).Host;
 
