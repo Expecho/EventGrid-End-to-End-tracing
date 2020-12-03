@@ -7,6 +7,18 @@ In the end, for end to end tracing to work existing integrations that use the Ev
 
 ![Demo](assets/end-to-end-output.png?raw=true )
 
+# Description of the demo
+
+The solution contains three functions:
+
+EventInitiator: [GET,POST] http://localhost:7071/api/EventInitiator
+
+EventSender: [GET,POST] http://localhost:7071/api/EventSender
+
+EventConsumer: eventGridTrigger
+
+The *EventInitiator* triggers the *EventSender* to send an Event that will be consumer by the *EventConsumer* function. The whole flow is visible as one operation in Application Insights.
+
 # Getting started using localhost
 1. Clone the repository.
 2. Create an Event Grid Topic and store the topic name and topic key in the `local.settings.json` file with keys `EG-Topic` and `EG-Key`. 
