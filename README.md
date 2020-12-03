@@ -1,9 +1,9 @@
 # EventGrid-End-to-End-tracing
 Demonstrate how to set up end-to-end tracing using application insights.
 
-Currently there is no support fro end-to-end tracing between the Azure Event Grid and an Event Grid triggered Azure Function when using the Event Grid Event schema. Right now Microsoft is working to address this by supporting end-to-end tracing using the CloudEvent schema and an Event Grid triggered Azure Function.
+Currently there is no support fro end-to-end tracing between the Azure Event Grid and an Event Grid triggered Azure Function when using the [Event Grid Event schema](https://docs.microsoft.com/en-us/azure/event-grid/event-schema). Right now Microsoft is working to address this by supporting end-to-end tracing using the [CloudEvents schema](https://docs.microsoft.com/en-us/azure/event-grid/cloud-event-schema) and an Event Grid triggered Azure Function.
 
-In the end, for end to end tracing to work existing integrations that use the Event Grid Event schema need to be modified to use the CloudEvent schema. Until that moment the work around as described in the repository kan be used. It will track the complete flow in Application Insights resulting in an end-to-end trace like this:
+In the end, for end to end tracing to work existing integrations that use the Event Grid Event schema need to be modified to use the CloudEvents schema. Until that moment the work around as described in the repository kan be used. It will track the complete flow in Application Insights resulting in an end-to-end trace like this:
 
 ![Demo](assets/end-to-end-output.png?raw=true )
 
